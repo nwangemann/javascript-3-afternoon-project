@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let newStr = ''
+  for (let whatev in obj){
+    newStr += obj[whatev]
+  }
+  return newStr
 }
 
 
@@ -54,7 +58,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function greaterThan10 (obj) {
+  for(let a in obj){
+    if (obj[a] > 10){
+      obj[a] = 0
+    }
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +77,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double (obj){
+  for (let a in obj){
+    obj[a] *= 2 
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -81,7 +97,15 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function secrets (obj){
+  let emp = ''
+  for (let a in obj){
+    if (a[0] === 's' && a[1] === 'h'){
+      emp += obj[a]
+    }
+  }
+  return emp
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -111,7 +135,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function removePassword (obj) {
+  for (let a in obj){
+    if (a === 'password'){
+      delete obj[a] 
+    }
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -124,12 +155,21 @@ var deleteTheBigNumbers = {
   fourth: 200
 }
 // Do not edit the code above.
-
+console.log("LOOK HERE", deleteTheBigNumbers)
 /*
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
 //Code Here
+function deleteMachine (obj){
+  for (let a in obj){
+    if (obj[a] > 100){
+      delete obj[a]
+      delete obj.a
+       }
+  }
+  return obj
+}
 
 
 
@@ -143,7 +183,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+// function startsWithK (obj){
+//   for (let a in obj){
+//     if (obj[a].startsWith('k')) {
+//       delete obj[a]
+//     }
+//   } 
+//   return obj
+// }
 
 
 ////////// PROBLEM 8 //////////
