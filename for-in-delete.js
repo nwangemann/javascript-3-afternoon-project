@@ -155,7 +155,6 @@ var deleteTheBigNumbers = {
   fourth: 200
 }
 // Do not edit the code above.
-console.log("LOOK HERE", deleteTheBigNumbers)
 /*
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
@@ -165,12 +164,12 @@ function deleteMachine (obj){
   for (let a in obj){
     if (obj[a] > 100){
       delete obj[a]
-      delete obj.a
-       }
+    }
   }
   return obj
 }
 
+console.log(deleteMachine(deleteTheBigNumbers))
 
 
 ////////// PROBLEM 7 //////////
@@ -182,15 +181,15 @@ function deleteMachine (obj){
   Return the updated object.
 */
 
-//Code Here
-// function startsWithK (obj){
-//   for (let a in obj){
-//     if (obj[a].startsWith('k')) {
-//       delete obj[a]
-//     }
-//   } 
-//   return obj
-// }
+
+function startsWithK (obj){
+  for (let a in obj){
+    if (obj[a].startsWith('k')) {
+      delete obj.a
+    }
+  } 
+  return obj
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -204,6 +203,13 @@ function deleteMachine (obj){
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure(input){
+  for (let g in input){
+    if (input[g].includes('treasure' === false)){
+      delete input.g
+    }
+  }
+  return input
+}
 
 
