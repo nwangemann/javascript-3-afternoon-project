@@ -51,7 +51,16 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater(arr){
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].firstName === 'Theo'){
+      arr[i].splice(i, 1)
+    } else if (arr[i].firstName === 'Lorie'){
+      arr[i].department = 'HR'
+    }
+  }
+  return arr
+}
 
 
 ////////// PROBLEM 2 //////////
