@@ -183,9 +183,9 @@ console.log(deleteMachine(deleteTheBigNumbers))
 
 
 function startsWithK (obj){
-  for (let a in obj){
-    if (obj[a].startsWith('k')) {
-      delete obj.a
+  for (let prop in obj){
+    if (prop.startsWith('k') === true){
+      delete obj[prop]
     }
   } 
   return obj
@@ -205,8 +205,8 @@ function startsWithK (obj){
 
 function hiddenTreasure(input){
   for (let g in input){
-    if (input[g].includes('treasure' === false)){
-      delete input.g
+    if (input[g].includes('treasure') === false){
+      delete input[g]
     }
   }
   return input
